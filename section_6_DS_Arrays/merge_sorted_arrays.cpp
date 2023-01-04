@@ -50,5 +50,6 @@ int main(){
     for(int num:merge_sorted_arrays(v1, v2))
     cout << num << " ";
     cout << endl;
+    return 0;
     
 }
