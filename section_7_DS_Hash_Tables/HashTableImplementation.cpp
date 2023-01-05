@@ -3,7 +3,6 @@
 #include <vector>
 using namespace std;
 
-
 class HashTable {
     int bucket_num;
     vector<string> key;
@@ -30,18 +29,14 @@ HashTable::HashTable(int b){
 
 void HashTable::deleteItem(string s){
     int index = hashFunc(s);
-    cout << "test" <<endl;
     if(!this->key[index].empty()){
-        cout << "well" << endl;
-        key[index].clear();
-        value[index] = -1;
+        this->key[index].clear();
+        this->value[index] = -1;
     }
 }
 
 void HashTable::insertItem(string s, int v){
-    
     int index = hashFunc(s);
-    cout << index << endl;
     if(!this->key[index].empty()){
         cout << "Just collide!" << endl;
     }
